@@ -112,9 +112,11 @@ body {
         margin: 0 auto !important; /*allows content to stay in middle. the auto is for left and right*/
         float: none !important;
         max-width: 1500px;
+    }
+
+    .quizzes{
         display: grid;
         grid-template-columns: 30% 30% 30%;
         grid-gap: 30px;
     }
-
 }
