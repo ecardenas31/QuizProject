@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sorts  Mill Goudy, serif;
+}
+
+html, body {
+    height: 100%; /* Ensure the full height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Align content in a column */
+    min-height: 100vh; /* Minimum height of viewport */
+    background-color: white;
+    padding-top: 200px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+#logo {
+    font-size: 32px;
+    text-decoration: none;
+    color: yellow;
+    font-weight: 200;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: yellow;
+    text-decoration: none;
+    font-weight: 200;
+    margin-left: 40px;
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left:0;
+    right: 0;
+    width: 0;
+    height:2px;
+    background: rgb(175, 138, 89);
+    transition: .3s;
+}
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: rgb(175, 138, 89);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid rgba(175, 138, 89, 0.5);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    @media screen and (max-width: 460px) {
+        #logo{
+            font-size: 18px;
+            text-indent: -10px;
+        }
+
+        @media screen and (max-width: 350px) {
+            #logo{
+                font-size: 12px;
+                text-indent: -30px;
+            }
+        }
+    }
+}
