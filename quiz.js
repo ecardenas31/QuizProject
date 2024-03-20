@@ -51,5 +51,16 @@ document.addEventListener('DOMContentLoaded', function() { //this allows the JS 
     var grade = document.createElement('p');
     grade.innerHTML= `Quiz Submitted! You got ${finalGrade} %`; // displays grade
     document.body.appendChild(grade);
+
+    localStorage.setItem(`${selectedQuizClass}Score`, finalGrade.toString());
+
+    var button1 = document.createElement('button');
+    button1.innerHTML= 'Go back to Quizzes'
+    document.body.appendChild('button1');
+
+    var button2 = document.createElement('button');
+    button1.innerHTML= 'Go Check all Grades'
+    document.body.appendChild('button2');
+
   }
   
