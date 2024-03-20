@@ -56,11 +56,17 @@ document.addEventListener('DOMContentLoaded', function() { //this allows the JS 
 
     var button1 = document.createElement('button');
     button1.innerHTML= 'Go back to Quizzes'
-    document.body.appendChild('button1');
+    document.querySelector('body').appendChild(button1);
+    button1.addEventListener('click', function() {
+      window.location.href = './index.html'; // Replace with your actual URL
+  });
 
     var button2 = document.createElement('button');
-    button1.innerHTML= 'Go Check all Grades'
-    document.body.appendChild('button2');
+    button2.innerHTML= 'Go Check all Grades'
+    document.querySelector('body').appendChild(button2);
+    button2.addEventListener('click', function() {
+      window.location.href = './grades.html'; // Replace with your actual URL
+  });
 
   }
   
